@@ -1,11 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-function MapComponent({ center }) {
+function MapComponent({ center, points }) {
+  console.table(points.results[0]);
   return (
     <>
       <MapContainer
-        style={{ height: "100vh", width: "100%" }}
+        style={{ height: "90vh", width: "100%" }}
         center={center}
         zoom={13}
         scrollWheelZoom={false}
